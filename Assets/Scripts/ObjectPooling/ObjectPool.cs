@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ObjectPooling
 {
-    public abstract class ObjectPool<T> : MonoBehaviour where T : MonoBehaviour
+    public abstract class ObjectPool<T> : MonoBehaviour, IObjectPool<T> where T : MonoBehaviour
     {
         [SerializeField] private T pooledObjectPrefab;
         [SerializeField] private int startSize;

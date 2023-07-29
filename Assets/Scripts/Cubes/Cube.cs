@@ -1,3 +1,4 @@
+using ObjectPooling;
 using UnityEngine;
 
 namespace Cubes
@@ -6,8 +7,7 @@ namespace Cubes
     {
         [SerializeField] Rigidbody rb;
 
-        private CubePool poolParent;
-        public CubePool PoolParent { get => poolParent; set => poolParent = value; }
+        public IObjectPool<Cube> PoolParent { get; set; }
 
         public Cube SetActive(bool value)
         {
