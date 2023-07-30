@@ -3,9 +3,12 @@ using System.Collections.Generic;
 
 namespace ObjectPooling
 {
-    public abstract class ObjectPool<T> : MonoBehaviour, IObjectPool<T> where T : MonoBehaviour, IPoolableObject<T>
+    public abstract class ObjectPool<T> : MonoBehaviour, IObjectPool<T> 
+        where T : MonoBehaviour, IPoolableObject<T>
     {
+        [Header("Poolable Object Prefab")]
         [SerializeField] private T pooledObjectPrefab;
+        [Header("Pool Sizes")]
         [SerializeField] private int startSize;
         [SerializeField] private int maxSize;
 
