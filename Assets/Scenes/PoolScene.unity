@@ -405,6 +405,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2839152697252073666, guid: 5c47ffbefe1931f43aeb7c2b21556957, type: 3}
+      propertyPath: maxSize
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2839152697252073666, guid: 5c47ffbefe1931f43aeb7c2b21556957, type: 3}
+      propertyPath: startSize
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2839152697252073692, guid: 5c47ffbefe1931f43aeb7c2b21556957, type: 3}
       propertyPath: m_Name
       value: CubePool

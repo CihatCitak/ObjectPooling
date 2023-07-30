@@ -16,8 +16,7 @@ namespace Cubes
             pooledObject
                 .SetTransformParent(null)
                 .SetActive(true)
-                .SetRigidbodyVelocity(Vector3.one * Random.Range(-2f, 2f))
-                .PoolParent = this;
+                .SetRigidbodyVelocity(Vector3.one * Random.Range(-2f, 2f));
         }
 
         protected override void EnqueueSettings(Cube pooledObject)
@@ -26,8 +25,7 @@ namespace Cubes
                 .SetTransformParent(transform)
                 .SetLocalPosition(Vector3.zero)
                 .SetActive(false)
-                .SetRigidbodyVelocity(Vector3.zero)
-                .PoolParent = null;
+                .SetRigidbodyVelocity(Vector3.zero);
         }
     }
 }

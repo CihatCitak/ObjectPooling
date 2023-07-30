@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Cubes
 {
-    public class Cube : MonoBehaviour
+    public class Cube : MonoBehaviour, IPoolableObject<Cube>
     {
         [SerializeField] Rigidbody rb;
 

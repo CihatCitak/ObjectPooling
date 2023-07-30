@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ObjectPooling
 {
-    public abstract class ObjectPool<T> : MonoBehaviour, IObjectPool<T> where T : MonoBehaviour
+    public abstract class ObjectPool<T> : MonoBehaviour, IObjectPool<T> where T : MonoBehaviour, IPoolableObject<T>
     {
         [SerializeField] private T pooledObjectPrefab;
         [SerializeField] private int startSize;
@@ -32,10 +32,11 @@ namespace ObjectPooling
         private void CreatePoolObjectThenAddQueue()
         {
             T pooledObject = CreatePoolObject();
-
-            createdObjectCount++;
+            pooledObject.PoolParent = this; //For depency injection
 
             Enqueue(pooledObject);
+
+            createdObjectCount++;
         }
 
         public T Dequeue()
